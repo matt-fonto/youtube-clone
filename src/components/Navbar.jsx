@@ -19,7 +19,7 @@ const Navbar = () => {
     >
       {/* when we click it, we go back home */}
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
-        <img src={logo} alt="logo" height={45} />
+        <img style={{ marginLeft: 10 }} src={logo} alt="logo" height={45} />
       </Link>
 
       {/* Search Bar */}
