@@ -2,9 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { categories } from "../utils/constants";
 
-const selectedCategory = "New"; // meanwhile, this is statically selected, but soon it will be dynamic
-
-const Sidebar = () => {
+const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Stack
       direction="row"
@@ -26,6 +24,7 @@ const Sidebar = () => {
               color: "white",
             }}
             key={name} // when we map things we react, we have to give each property a key
+            onClick={() => setSelectedCategory(name)} //then we can select our category dynamically
           >
             <span
               style={{
