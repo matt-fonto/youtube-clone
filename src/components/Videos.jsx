@@ -10,7 +10,7 @@ const Videos = ({ videos }) => {
         return (
           <Box key={index}>
             {/* if it's a channel */}
-            {/* {item.id.channelId && <ChannelCard channelDetail={item} />} */}
+            {item.id.channelId && <ChannelCard channelDetail={item} />}
 
             {/* if it's a video */}
             {item.id.videoId && <VideoCard video={item} />}

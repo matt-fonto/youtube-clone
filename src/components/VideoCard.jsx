@@ -20,6 +20,7 @@ const VideoCard = ({
     <Card
       sx={{
         borderRadius: "5px",
+        height: "37vh",
         transition: "all 0.5s",
         boxShadow: "none",
         width: {
@@ -36,15 +37,16 @@ const VideoCard = ({
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
           sx={{
-            width: 358,
-            height: 180,
+            height: "22vh",
+            width: "100%",
+            objectFit: "cover",
           }}
         />
       </Link>
       <CardContent
         sx={{
           background: "#111",
-          height: "106px",
+          height: "11vh",
         }}
       >
         {/* The video title */}
