@@ -30,6 +30,7 @@ const VideoCard = ({
         "&:hover": {
           boxShadow: "1px 1px 5px gray",
         },
+        maxWidth: "371px",
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
@@ -67,7 +68,7 @@ const VideoCard = ({
           <Typography variant="subtitle2" fontWeight="bold" color="#999">
             {snippet?.channelTitle.slice(0, 40) ||
               demoChannelTitle.slice(0, 40)}
-            <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
+            <CheckCircle sx={{ fontSize: 12, color: "#1778f2", ml: "5px" }} />
           </Typography>
         </Link>
       </CardContent>

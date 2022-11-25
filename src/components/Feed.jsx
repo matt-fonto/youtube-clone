@@ -11,13 +11,24 @@ const Feed = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) =>
-      setVideos(data.items)
-    );
+    async function fetchData() {
+      try {
+        const data = await fetchFromAPI(
+          `search?part=snippet&q=${selectedCategory}`
+        );
+
+        setVideos(data.items);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    fetchData();
   }, [selectedCategory]);
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+      {/* Container sidebar */}
       <Box
         sx={{
           height: { sx: "auto", md: "92vh" },
@@ -44,13 +55,14 @@ const Feed = () => {
         </Typography>
       </Box>
 
-      {/* videos */}
+      {/* container videos */}
       <Box
         p={2}
         sx={{
           overflowY: "auto",
           height: "90vh",
           flex: 2,
+          justifyContent: "center",
         }}
       >
         {/* title */}

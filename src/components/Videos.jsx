@@ -5,10 +5,16 @@ import VideoCard from "./VideoCard";
 
 const Videos = ({ videos }) => {
   return (
-    <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack direction="row" flexWrap="wrap" gap={2}>
       {videos.map((item, index) => {
         return (
-          <Box key={index}>
+          <Box
+            key={index}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             {/* if it's a channel */}
             {item.id.channelId && <ChannelCard channelDetail={item} />}
 
