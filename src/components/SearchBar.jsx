@@ -6,16 +6,19 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const SearchBar = () => {
   // component responsible for:
-  // 1. getting our search term
+  // 1. storing each key stroke to be passed as an input onSubmit
+  // 2. getting our search term and allowing us to programmatically navigate to it
 
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+  // useNavigate = allows us to navigate programatically, once and event happens
 
   function handleSubmit(e) {
     e.preventDefault(); // we don't want it to reload the page
 
     if (searchTerm) {
-      navigate(`/search/${searchTerm}`);
+      //if we have a search term
+      navigate(`/search/${searchTerm}`); //we navigate to this path
 
       setSearchTerm("");
     }
@@ -44,7 +47,7 @@ const SearchBar = () => {
         value={searchTerm}
         onChange={(e) => {
           setSearchTerm(e.target.value);
-          // e.target.value = where the value of a key press is stored
+          // e.target.value = where the value of a key stroke is stored
         }}
       />
       <IconButton

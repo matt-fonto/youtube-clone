@@ -12,7 +12,7 @@ const Feed = () => {
   // 2. orgazing the screen into sidebar and videos feed
   // 3. pass the videos props to the videos component based on the selected category
 
-  const [selectedCategory, setSelectedCategory] = useState("WWII");
+  const [selectedCategory, setSelectedCategory] = useState("Classic Music");
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {

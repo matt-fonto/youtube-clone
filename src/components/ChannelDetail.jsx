@@ -15,6 +15,7 @@ const ChannelDetail = () => {
   const [channelDetail, setChannelDetail] = useState(null);
   const [videos, setVideos] = useState([]);
   const { id } = useParams(); //router parameters = a variable inside the route -> "channel/123", "channel/999"
+  // useParams = allows us to get the channel's id
 
   useEffect(() => {
     async function fetchResults() {
