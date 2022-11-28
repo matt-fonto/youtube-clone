@@ -11,11 +11,15 @@ import {
 } from "../utils/constants";
 
 const VideoCard = ({
-  video: {
+  videoInfo: {
     id: { videoId },
     snippet,
   },
 }) => {
+  // Component responsible for:
+  // 1. getting the video's info -- thumbnail, id, title
+  // 2. allows us to navigate to the specific video or the video's channel
+
   return (
     <Card
       sx={{

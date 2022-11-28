@@ -5,10 +5,12 @@ import { Paper, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchBar = () => {
+  // component responsible for:
+  // 1. getting our search term
+
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
-  // paper is similar to a div, but it has a whitebackground and some elevation
   function handleSubmit(e) {
     e.preventDefault(); // we don't want it to reload the page
 
@@ -20,6 +22,7 @@ const SearchBar = () => {
   }
 
   return (
+    // paper is similar to a div, but it has a whitebackground and some elevation
     <Paper
       component="form"
       onSubmit={handleSubmit}

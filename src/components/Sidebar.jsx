@@ -1,8 +1,13 @@
 import React from "react";
 import { Stack } from "@mui/material";
-import { categories } from "../utils/constants";
+import { categories } from "../utils/constants"; // receiving the categories from the constants = array of categories
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
+  //component responsible for:
+  //1. mapping through our categories list and getting each category
+  //2. getting and rendering the category's name and icon
+  //3. allowing us to pass the name of the category through onClick to the setSelectedCategory -- declared in the Feed component
+
   return (
     <Stack
       direction="row"

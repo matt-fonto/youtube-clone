@@ -5,6 +5,10 @@ import { logo } from "../utils/constants";
 import SearchBar from "./SearchBar";
 
 const Navbar = () => {
+  // component responsbile for:
+  // 1. showing the logo
+  // 2. containing the SearchBar
+
   return (
     <Stack
       direction="row"

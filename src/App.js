@@ -10,14 +10,15 @@ import {
 } from "./components";
 
 const App = () => {
+  // Component responsible for: centralizing the navigation, the cornerstone for other components
   return (
     <BrowserRouter>
       <Box sx={{ backgroundColor: "#222" }}>
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Feed />} />
-          <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/channel/:id" element={<ChannelDetail />} />
+          <Route path="/video/:id" element={<VideoDetail />} />
           <Route path="/search/:searchTerm" element={<SearchFeed />} />
         </Routes>
       </Box>

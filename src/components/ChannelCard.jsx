@@ -4,7 +4,11 @@ import { CheckCircle } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { demoProfilePicture } from "../utils/constants";
 
-const ChannelCard = ({ channelDetail, marginTop, marginLeft }) => {
+const ChannelCard = ({ channelDetail, marginTop }) => {
+  // Component responsible for:
+  // 1. providing access to channel's page -- channelDetail
+  // 2. rendering the channel's thumb and title
+
   return (
     <Box
       sx={{
@@ -19,14 +23,16 @@ const ChannelCard = ({ channelDetail, marginTop, marginLeft }) => {
           md: "40vh",
           xs: "356px",
         },
-        "&:hover": {
-          boxShadow: "1px 1px 5px red",
-          opacity: "1",
-        },
+        // "&:hover": {
+        //   boxShadow: "1px 1px 5px red",
+        //   opacity: "1",
+        // },
         marginTop, // it's only used when calling the prop, this way we can personalize a reusable component
       }}
     >
+      {/* this is how we could access the channel's */}
       <Link to={`/channel/${channelDetail?.id?.channelId}`}>
+        {/* channel card container */}
         <CardContent
           sx={{
             display: "flex",
@@ -37,6 +43,7 @@ const ChannelCard = ({ channelDetail, marginTop, marginLeft }) => {
             color: "#fff",
           }}
         >
+          {/* channel's thumbnail */}
           <CardMedia
             className="video-card"
             image={channelDetail?.snippet?.thumbnails?.high?.url}
@@ -48,6 +55,8 @@ const ChannelCard = ({ channelDetail, marginTop, marginLeft }) => {
               mb: 2,
               border: "1px solid #e3e3e3",
               ml: 5,
+              display: "flex",
+              justifyContent: "center",
             }}
           />
           <Typography variant="h6">
