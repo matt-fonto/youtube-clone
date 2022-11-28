@@ -24,17 +24,21 @@ const VideoCard = ({
     <Card
       sx={{
         borderRadius: "5px",
-        height: "37vh",
+        height: {
+          sm: "377px",
+          md: "320px",
+        },
         transition: "all 0.5s",
         boxShadow: "none",
         width: {
-          md: "40vh",
-          xs: "100%",
+          xs: "320px",
+          sm: "330px",
+          md: "100%",
         },
         "&:hover": {
           boxShadow: "1px 1px 5px gray",
         },
-        maxWidth: "371px",
+        // maxWidth: "371px",
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
@@ -42,9 +46,12 @@ const VideoCard = ({
           image={snippet?.thumbnails?.high?.url}
           alt={snippet?.title}
           sx={{
-            height: "22vh",
-            width: "100%",
-            objectFit: "cover",
+            height: "200px",
+            width: {
+              xs: "100%",
+              sm: "358px",
+            },
+            objectFit: "fill",
           }}
         />
       </Link>
