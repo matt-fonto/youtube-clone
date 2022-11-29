@@ -1,5 +1,5 @@
 # Youtube Clone Project
-A fully functional Youtube clone app created with React, MUI5, React Router and hosted with Netlify. 
+A fully functional Youtube clone app created with React, Axios, MUI5, React Router and hosted with Netlify. 
 
 # Project Description
 The user is able to:
